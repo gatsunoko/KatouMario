@@ -7,6 +7,8 @@ public abstract class SingletonMonoBehaviourFast<T> : MonoBehaviour where T : Si
   protected static readonly string[] findTags =
   {
     "Player",
+    "AdController",
+    "GameController",
   };
 
   protected static T instance;
