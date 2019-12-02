@@ -10,6 +10,8 @@ public class GameControllerScript : SingletonMonoBehaviourFast<GameControllerScr
   PlayerScript playerScript;
   GameObject mainCamera;
   public Vector2 restartPoint;
+  float deadAfterTime = 0;
+  public bool reset = false;
 
   void Start() {
     this.playerScript = PlayerScript.Instance;
@@ -19,13 +21,21 @@ public class GameControllerScript : SingletonMonoBehaviourFast<GameControllerScr
 
   void Update() {
     if (this.playerScript.dead) {
-      this.player.transform.position = this.restartPoint;
-      this.mainCamera.transform.position = new Vector3(this.restartPoint.x, this.restartPoint.y, -10.0f);
+      this.deadAfterTime += Time.deltaTime;
+      if (this.deadAfterTime >= 2.0f) {
+        this.deadAfterTime = 0;
+        this.player.transform.position = this.restartPoint;
+        this.mainCamera.transform.position = new Vector3(this.restartPoint.x, this.restartPoint.y, -10.0f);
+        this.reset = true;
+      }
+    }
+    else {
+      this.reset = false;
     }
   }
 
   private void LateUpdate() {
-    if (this.playerScript.dead) {
+    if (this.reset) {
       this.playerScript.dead = false;
     }
   }

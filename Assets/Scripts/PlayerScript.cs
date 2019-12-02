@@ -29,21 +29,29 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
   }
 
   private void FixedUpdate() {
-    if (!this.stageDirectorScript.clear) {
-      //スピード制限
-      float vy = Mathf.Clamp(rigid2d.velocity.y, velocityMin.y, velocityMax.y);
-      //歩行処理
-      this.rigid2d.velocity = new Vector2(key * walkForce, vy);
+    if (this.dead) {
+      this.rigid2d.velocity = new Vector2(0, 0);
+    }
+    else {
+      if (!this.stageDirectorScript.clear) {
+        //スピード制限
+        float vy = Mathf.Clamp(rigid2d.velocity.y, velocityMin.y, velocityMax.y);
+        //歩行処理
+        this.rigid2d.velocity = new Vector2(key * walkForce, vy);
 
-      //動く方向に応じて反転
-      if (key != 0) {
-        transform.localScale = new Vector3(key, 1, 1);
+        //動く方向に応じて反転
+        if (key != 0) {
+          transform.localScale = new Vector3(key, 1, 1);
+        }
+
+        //ジャンプ処理
+        if (this.jumpButton && this.grounded_result) {
+          this.rigid2d.velocity = new Vector2(this.rigid2d.velocity.x, this.jumpForce);
+          this.jumpCount++;
+        }
       }
-
-      //ジャンプ処理
-      if (this.jumpButton && this.grounded_result) {
-        this.rigid2d.velocity = new Vector2(this.rigid2d.velocity.x, this.jumpForce);
-        this.jumpCount++;
+      else {
+        this.rigid2d.velocity = new Vector2(1 * walkForce, 0);
       }
     }
   }
@@ -71,6 +79,16 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
       this.jumpButton = false;
     }
     //------------------PCデバッグ用ここまで-------------------------
+    //死んでたら速度ゼロ
+    if (this.dead) {
+      this.rigid2d.velocity = new Vector2(0, 0);
+      this.animator.SetTrigger("Dead");
+      this.rigid2d.bodyType = RigidbodyType2D.Kinematic;
+    }
+    else {
+      this.animator.SetTrigger("Reset");
+      this.rigid2d.bodyType = RigidbodyType2D.Dynamic;
+    }
     //ジャンプできるかどうかの接地判定
     Vector2 linePos = transform.position;
     linePos.y -= 0.06f;
@@ -88,7 +106,10 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     else {
       grounded_result = false;
     }
-
+    //ボタンおしっぱでジャンプし続けないための処理
+    if (!grounded_result) {
+      this.jumpButton = false;
+    }
     //入力状況に応じてkey決定
     if (this.leftButton) {
       this.key = -1;
