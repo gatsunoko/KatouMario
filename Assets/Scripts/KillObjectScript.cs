@@ -7,5 +7,8 @@ public class KillObjectScript : MonoBehaviour {
     if (col.gameObject.tag == "Player") {
       PlayerScript.Instance.dead = true;
     }
+    else if (col.gameObject.tag == "Enemy") {
+      Destroy(col.gameObject);
+    }
   }
 }

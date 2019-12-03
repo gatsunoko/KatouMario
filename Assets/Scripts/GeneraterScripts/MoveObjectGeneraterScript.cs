@@ -9,12 +9,20 @@ public class MoveObjectGeneraterScript : MonoBehaviour {
   float delayTime = 100.0f;
   public Vector2[] destination;
   public Vector2[] Speed;
+  GameControllerScript gameControllerScript;
 
   void Start() {
     GetComponent<SpriteRenderer>().enabled = false;
+    this.gameControllerScript = GameControllerScript.Instance;
   }
 
   void Update() {
+    if (this.gameControllerScript.reset) {
+      delayTime = 0;
+      foreach(GameObject childObject in transform) {
+        Destroy(childObject);
+      }
+    }
     delayTime += Time.deltaTime;
     if (delayTime > generateDelayTime) {
       delayTime = 0;

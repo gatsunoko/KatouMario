@@ -6,9 +6,9 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
 
   Rigidbody2D rigid2d;
   Animator animator;
-  bool leftButton = false;
-  bool rightButton = false;
-  bool jumpButton = false;
+  public bool leftButton = false;
+  public bool rightButton = false;
+  public bool jumpButton = false;
   public Vector2 velocityMin;
   public Vector2 velocityMax;
   float key = 0;
@@ -20,12 +20,19 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
   public LayerMask groundLayer;
   public bool dead = false;
   StageDirectorScript stageDirectorScript;
+  bool deadOne = true; //死んだら一回だけ実行するやつの判定
+  AudioSource deadSound;
+  public AudioClip[] deadSounds;
+  int clipLength = 0;
 
   void Start() {
     this.rigid2d = GetComponent<Rigidbody2D>();
     this.animator = GetComponent<Animator>();
     this.dead = false;
     this.stageDirectorScript = GameObject.Find("StageDirector").GetComponent<StageDirectorScript>();
+    this.deadSound = GetComponent<AudioSource>();
+    this.clipLength = deadSounds.Length;
+    this.deadOne = true;
   }
 
   private void FixedUpdate() {
@@ -84,10 +91,17 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
       this.rigid2d.velocity = new Vector2(0, 0);
       this.animator.SetTrigger("Dead");
       this.rigid2d.bodyType = RigidbodyType2D.Kinematic;
+      if (this.deadOne) {
+        int i = Random.Range(0, clipLength);
+        this.deadSound.clip = this.deadSounds[i];
+        this.deadSound.PlayOneShot(deadSound.clip);
+        this.deadOne = false;
+      }
     }
     else {
       this.animator.SetTrigger("Reset");
       this.rigid2d.bodyType = RigidbodyType2D.Dynamic;
+      this.deadOne = true;
     }
     //ジャンプできるかどうかの接地判定
     Vector2 linePos = transform.position;
@@ -120,6 +134,10 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     else {
       this.key = 0;
     }
+    //クリアしてたら→入力状態
+    if (this.stageDirectorScript.clear) {
+      this.key = 1;
+    }
 
     //アニメーション処理
     if (grounded_result) {
@@ -150,29 +168,5 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
       //親オブジェクトが回転していた場合自分の角度も狂っているので、０にする
       transform.rotation = Quaternion.Euler(0, 0, 0);
     }
-  }
-
-  public void LeftButtonDown() {
-    this.leftButton = true;
-  }
-
-  public void LeftButtonUp() {
-    this.leftButton = false;
-  }
-
-  public void RightButtonDown() {
-    this.rightButton = true;
-  }
-
-  public void RightButtonUp() {
-    this.rightButton = false;
-  }
-
-  public void JumpButtonDown() {
-    this.jumpButton = true;
-  }
-
-  public void JumpButtonUp() {
-    this.jumpButton = false;
   }
 }
