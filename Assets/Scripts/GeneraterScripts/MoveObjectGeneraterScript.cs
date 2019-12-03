@@ -17,12 +17,6 @@ public class MoveObjectGeneraterScript : MonoBehaviour {
   }
 
   void Update() {
-    if (this.gameControllerScript.reset) {
-      delayTime = 0;
-      foreach(Transform childObject in transform) {
-        Destroy(childObject.gameObject);
-      }
-    }
     delayTime += Time.deltaTime;
     if (delayTime > generateDelayTime) {
       delayTime = 0;
@@ -36,5 +30,12 @@ public class MoveObjectGeneraterScript : MonoBehaviour {
       floorInstanceScript.Speed = this.Speed;
     }
   }
-
+  private void LateUpdate() {
+    if (this.gameControllerScript.reset) {
+      delayTime = 0;
+      //foreach (Transform childObject in transform) {
+      //  Destroy(childObject.gameObject);
+      //}
+    }
+  }
 }

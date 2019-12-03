@@ -91,9 +91,9 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     //死んでたら速度ゼロ
     if (this.dead) {
       this.rigid2d.velocity = new Vector2(0, 0);
-      this.animator.SetTrigger("Dead");
       this.rigid2d.bodyType = RigidbodyType2D.Kinematic;
       if (this.deadOne) {
+        this.animator.SetTrigger("Dead");
         int i = Random.Range(0, clipLength);
         this.deadSound.clip = this.deadSounds[i];
         this.deadSound.PlayOneShot(deadSound.clip);
@@ -167,7 +167,7 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     }
   }
 
-  private void OnCollisionExit2D(Collision2D col) {
+  private void OnTriggerExit2D(Collider2D col) {
     //動く床から離れたら床との親子関係を解消する
     if (col.gameObject.tag == "MoveFloor") {
       transform.SetParent(null);

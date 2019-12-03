@@ -1949,7 +1949,53 @@ MonoBehaviour:
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1136369220}
+          m_MethodName: OnClickStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1136369220}
+          m_MethodName: OnClickEnd
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1136369220 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1093292083960529100, guid: 0113ff047e8ec7445a554dc35f28878f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1915221196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136369214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db587ff48af5713449cfaee2edb8f6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1201258249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1093292083622966406, guid: 0113ff047e8ec7445a554dc35f28878f,
@@ -2559,7 +2605,53 @@ MonoBehaviour:
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1658697638}
+          m_MethodName: OnClickStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1658697638}
+          m_MethodName: OnClickEnd
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1658697638 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1093292084761668845, guid: 0113ff047e8ec7445a554dc35f28878f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1915221196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658697632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db587ff48af5713449cfaee2edb8f6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1718930893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,7 +2853,53 @@ MonoBehaviour:
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1783862171}
+          m_MethodName: OnClickStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1783862171}
+          m_MethodName: OnClickEnd
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1783862171 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1093292084912258014, guid: 0113ff047e8ec7445a554dc35f28878f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1915221196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783862165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db587ff48af5713449cfaee2edb8f6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1804010191 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1093292085616174702, guid: 0113ff047e8ec7445a554dc35f28878f,
@@ -2780,7 +2918,53 @@ MonoBehaviour:
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1804010197}
+          m_MethodName: OnClickStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1804010197}
+          m_MethodName: OnClickEnd
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1804010197 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1093292085616174691, guid: 0113ff047e8ec7445a554dc35f28878f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1915221196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804010191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db587ff48af5713449cfaee2edb8f6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810510032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1093292084509898223, guid: 0113ff047e8ec7445a554dc35f28878f,
@@ -3037,7 +3221,53 @@ MonoBehaviour:
   m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates: []
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1855621763}
+          m_MethodName: OnClickStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1855621763}
+          m_MethodName: OnClickEnd
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1855621763 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1093292083987754448, guid: 0113ff047e8ec7445a554dc35f28878f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1915221196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855621756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db587ff48af5713449cfaee2edb8f6df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1858266757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3176,6 +3406,156 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageLinks
       objectReference: {fileID: 0}
+    - target: {fileID: 230070611825224980, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230070612563731691, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230070612749805176, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084998173326, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292083953575264, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084848163373, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292083488719555, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084083159553, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 930683023}
+    - target: {fileID: 1093292084083159553, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: stageSelectController
+      value: 
+      objectReference: {fileID: 1250524450}
+    - target: {fileID: 1093292084017725875, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084556415197, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084027073631, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084740013232, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292083858927162, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 930683023}
+    - target: {fileID: 1093292083858927162, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: stageSelectController
+      value: 
+      objectReference: {fileID: 1250524450}
+    - target: {fileID: 230070612982826494, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084040198129, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: mainCamera
+      value: 
+      objectReference: {fileID: 930683023}
+    - target: {fileID: 1093292084040198129, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: stageSelectController
+      value: 
+      objectReference: {fileID: 1250524450}
+    - target: {fileID: 1093292085260436811, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292083960529143, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292083622966406, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292085564562961, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084761668840, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084573205798, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230070611278072535, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292085539429334, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084912258009, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292085616174702, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292084509898223, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093292083987754459, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1093292084678410278, guid: 0113ff047e8ec7445a554dc35f28878f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3231,106 +3611,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 230070611278072535, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230070611825224980, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230070612563731691, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230070612749805176, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 230070612982826494, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292083488719555, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292083622966406, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292083953575264, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292083960529143, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292083987754459, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292084017725875, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292084027073631, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292084509898223, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292084556415197, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292084573205798, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292085616174702, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292084761668840, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292084912258009, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292085260436811, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292085539429334, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1093292084684274736, guid: 0113ff047e8ec7445a554dc35f28878f,
         type: 3}
       propertyPath: m_IsActive
@@ -3341,31 +3621,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1093292084740013232, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1093292085168158910, guid: 0113ff047e8ec7445a554dc35f28878f,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1093292084848163373, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292084998173326, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093292085564562961, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 230070611278072523, guid: 0113ff047e8ec7445a554dc35f28878f,
         type: 3}
       propertyPath: mainCamera
@@ -3436,16 +3696,6 @@ PrefabInstance:
       propertyPath: stageSelectController
       value: 
       objectReference: {fileID: 1250524450}
-    - target: {fileID: 1093292083858927162, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 930683023}
-    - target: {fileID: 1093292083858927162, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: stageSelectController
-      value: 
-      objectReference: {fileID: 1250524450}
     - target: {fileID: 1093292083953575269, guid: 0113ff047e8ec7445a554dc35f28878f,
         type: 3}
       propertyPath: mainCamera
@@ -3492,26 +3742,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 930683023}
     - target: {fileID: 1093292084027073620, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: stageSelectController
-      value: 
-      objectReference: {fileID: 1250524450}
-    - target: {fileID: 1093292084040198129, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 930683023}
-    - target: {fileID: 1093292084040198129, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: stageSelectController
-      value: 
-      objectReference: {fileID: 1250524450}
-    - target: {fileID: 1093292084083159553, guid: 0113ff047e8ec7445a554dc35f28878f,
-        type: 3}
-      propertyPath: mainCamera
-      value: 
-      objectReference: {fileID: 930683023}
-    - target: {fileID: 1093292084083159553, guid: 0113ff047e8ec7445a554dc35f28878f,
         type: 3}
       propertyPath: stageSelectController
       value: 
@@ -3596,6 +3826,11 @@ PrefabInstance:
       propertyPath: stageSelectController
       value: 
       objectReference: {fileID: 1250524450}
+    - target: {fileID: 1093292084912258014, guid: 0113ff047e8ec7445a554dc35f28878f,
+        type: 3}
+      propertyPath: myEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1093292084998173315, guid: 0113ff047e8ec7445a554dc35f28878f,
         type: 3}
       propertyPath: mainCamera

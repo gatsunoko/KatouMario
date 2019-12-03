@@ -9,7 +9,8 @@ public class ManyGeneraterChildScript : MonoBehaviour {
   public Vector2[] Speed;
   bool xArrival = false;
   bool yArrival = false;
-  bool destroy = false;
+  [System.NonSerialized]
+  public bool destroy = false;
   public bool destinationPresent = true;
 
   void Start() {

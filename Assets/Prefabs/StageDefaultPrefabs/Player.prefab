@@ -132,6 +132,63 @@ PolygonCollider2D:
       - {x: 0.32523996, y: -0.63356197}
       - {x: 0.33763814, y: 0.24513829}
       - {x: 0.3346246, y: 0.64344037}
+--- !u!1 &2059521611974695626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6820774314943093080}
+  - component: {fileID: 5510751574746970003}
+  m_Layer: 12
+  m_Name: PlayerArea
+  m_TagString: PlayerSensor
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6820774314943093080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059521611974695626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7827082227549428782}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5510751574746970003
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059521611974695626}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.91913986}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.78, y: 2.15}
+    newSize: {x: 0.98, y: 1.21}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.78, y: 1.8382797}
+  m_EdgeRadius: 0
 --- !u!1 &2465793596977468774
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +321,7 @@ Transform:
   m_Children:
   - {fileID: 6330190352464618906}
   - {fileID: 2671867696683743616}
+  - {fileID: 6820774314943093080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -304,7 +362,7 @@ SpriteRenderer:
   m_SortingLayerID: -666308823
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6349259742755164919, guid: 499053a9d5296bc429e2a78a9d857c35,
+  m_Sprite: {fileID: -5794447283612269906, guid: 499053a9d5296bc429e2a78a9d857c35,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
