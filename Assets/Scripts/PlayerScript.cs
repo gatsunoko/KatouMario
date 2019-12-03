@@ -6,6 +6,8 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
 
   Rigidbody2D rigid2d;
   Animator animator;
+  public GameObject groundCollider;
+  public GameObject jumpCollider;
   public bool leftButton = false;
   public bool rightButton = false;
   public bool jumpButton = false;
@@ -107,10 +109,10 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     Vector2 linePos = transform.position;
     linePos.y -= 0.06f;
     grounded[0] = Physics2D.Linecast(transform.position, linePos, groundLayer);
-    linePos.x -= 0.22f;
+    linePos.x -= 0.15f;
     grounded[1] = Physics2D.Linecast(transform.position, linePos, groundLayer);
-    linePos.x += 0.22f;
-    linePos.x += 0.22f;
+    linePos.x += 0.15f;
+    linePos.x += 0.15f;
     grounded[2] = Physics2D.Linecast(transform.position, linePos, groundLayer);
     //接地判定をして結果をgourended_result変数に入れる
     if ((grounded[0]) || (grounded[1]) || (grounded[2])) {
@@ -138,12 +140,16 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     if (this.stageDirectorScript.clear) {
       this.key = 1;
     }
-
-    //アニメーション処理
+    //地面に接地しているかどうかでわける処理
     if (grounded_result) {
+      //アニメーション処理
+      this.groundCollider.SetActive(true);
+      this.jumpCollider.SetActive(false);
       this.animator.SetBool("Grounded", true);
     }
     else {
+      this.groundCollider.SetActive(false);
+      this.jumpCollider.SetActive(true);
       this.animator.SetBool("Grounded", false);
     }
     if (this.rigid2d.velocity.x != 0 && this.key != 0) {

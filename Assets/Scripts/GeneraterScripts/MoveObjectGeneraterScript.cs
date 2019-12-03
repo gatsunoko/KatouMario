@@ -19,8 +19,8 @@ public class MoveObjectGeneraterScript : MonoBehaviour {
   void Update() {
     if (this.gameControllerScript.reset) {
       delayTime = 0;
-      foreach(GameObject childObject in transform) {
-        Destroy(childObject);
+      foreach(Transform childObject in transform) {
+        Destroy(childObject.gameObject);
       }
     }
     delayTime += Time.deltaTime;

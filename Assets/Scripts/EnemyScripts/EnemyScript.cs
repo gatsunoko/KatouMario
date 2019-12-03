@@ -15,4 +15,10 @@ public class EnemyScript : MonoBehaviour {
       Destroy(gameObject);
     }
   }
+
+  private void OnTriggerEnter2D(Collider2D col) {
+    if (col.gameObject.tag == "Player") {
+      PlayerScript.Instance.dead = true;
+    }
+  }
 }

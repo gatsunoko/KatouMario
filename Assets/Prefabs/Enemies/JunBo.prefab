@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6867508454851427712}
   - component: {fileID: 6867508454851427772}
   - component: {fileID: 6867508454851427773}
-  - component: {fileID: 6867508454851427774}
   - component: {fileID: 6867508454851427775}
   - component: {fileID: 6867508454851427713}
+  - component: {fileID: 1112089280356862768}
   m_Layer: 11
   m_Name: JunBo
   m_TagString: Enemy
@@ -156,18 +156,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6867508454851427774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6867508454851427768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59a1e15080216024c889b33c1126249b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6867508454851427775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,3 +185,19 @@ CircleCollider2D:
   m_Offset: {x: 0.030369759, y: -0.4919033}
   serializedVersion: 2
   m_Radius: 0.06429005
+--- !u!70 &1112089280356862768
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6867508454851427768}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.013106346}
+  m_Size: {x: 0.7761154, y: 0.96242714}
+  m_Direction: 0
