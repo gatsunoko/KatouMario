@@ -8,11 +8,9 @@ public class EnemyTachStartScript : MonoBehaviour {
   List<MoveObjectScript> moveObjectScripts = new List<MoveObjectScript>();
   public float speed = 5.0f;
   AudioSource enemyStartSound;
-  GameControllerScript gameControllerScript;
   bool firstAction = true;
 
   void Start() {
-    this.gameControllerScript = GameControllerScript.Instance;
     this.enemyStartSound = GetComponent<AudioSource>();
     foreach (GameObject controleObject in startObject) {
       if (controleObject.GetComponent<MoveObjectScript>()) {
@@ -21,15 +19,6 @@ public class EnemyTachStartScript : MonoBehaviour {
     }
     foreach (MoveObjectScript moveObjectScript in moveObjectScripts) {
       moveObjectScript.speed = 0;
-    }
-  }
-
-  private void Update() {
-    if (this.gameControllerScript.reset) {
-      this.firstAction = true;
-      foreach (MoveObjectScript moveObjectScript in moveObjectScripts) {
-        moveObjectScript.speed = 0;
-      }
     }
   }
 

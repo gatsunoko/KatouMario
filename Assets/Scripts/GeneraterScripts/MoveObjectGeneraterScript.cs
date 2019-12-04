@@ -9,11 +9,9 @@ public class MoveObjectGeneraterScript : MonoBehaviour {
   float delayTime = 100.0f;
   public Vector2[] destination;
   public Vector2[] Speed;
-  GameControllerScript gameControllerScript;
 
   void Start() {
     GetComponent<SpriteRenderer>().enabled = false;
-    this.gameControllerScript = GameControllerScript.Instance;
   }
 
   void Update() {
@@ -30,12 +28,9 @@ public class MoveObjectGeneraterScript : MonoBehaviour {
       floorInstanceScript.Speed = this.Speed;
     }
   }
-  private void LateUpdate() {
-    if (this.gameControllerScript.reset) {
-      delayTime = 0;
-      //foreach (Transform childObject in transform) {
-      //  Destroy(childObject.gameObject);
-      //}
-    }
-  }
+  //private void LateUpdate() {
+  //  if (this.gameControllerScript.reset) {
+  //    delayTime = 0;
+  //  }
+  //}
 }

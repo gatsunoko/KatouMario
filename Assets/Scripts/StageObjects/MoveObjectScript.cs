@@ -8,12 +8,10 @@ public class MoveObjectScript : MonoBehaviour {
   public float speed = 10.0f;
   float defaultAngleZ = 0;
   Vector2 restartPoint;
-  GameControllerScript gameControllerScript;
 
   private void Start() {
     defaultAngleZ = transform.eulerAngles.z;
     this.restartPoint = transform.position;
-    this.gameControllerScript = GameControllerScript.Instance;
   }
 
   void FixedUpdate() {
@@ -78,12 +76,6 @@ public class MoveObjectScript : MonoBehaviour {
     }
     else {
       i = 0;
-    }
-  }
-
-  private void Update() {
-    if (this.gameControllerScript.reset) {
-      transform.position = restartPoint;
     }
   }
 }
