@@ -9,6 +9,7 @@ TagManager:
   - BGM
   - Enemy
   - PlayerSensor
+  - EnemyGenerater
   layers:
   - Default
   - TransparentFX

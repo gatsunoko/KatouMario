@@ -11,6 +11,9 @@ public class JunBoScript : MonoBehaviour {
   float key;
   Vector2 direction;
   SpriteRenderer spriteRender;
+  //ジェネレータから変数受け取るやつ
+  GameObject generater;
+  EnemyGeneraterScript generaterScript;
 
   void Start() {
     this.rigid2d = GetComponent<Rigidbody2D>();
@@ -18,6 +21,14 @@ public class JunBoScript : MonoBehaviour {
     this.player = PlayerScript.Instance.gameObject;
     this.key = 0;
     this.spriteRender = GetComponent<SpriteRenderer>();
+    //親要素がありジェネレータならば変数を取得する
+    if (transform.parent) {
+      if (transform.parent.tag == "EnemyGenerater") {
+        this.generater = transform.parent.gameObject;
+        this.generaterScript = this.generater.GetComponent<EnemyGeneraterScript>();
+        this.speed = this.generaterScript.handOverFloat[0];
+      }
+    }
   }
 
   private void FixedUpdate() {
