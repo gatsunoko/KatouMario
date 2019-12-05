@@ -15,6 +15,7 @@ public class GameControllerScript : SingletonMonoBehaviourFast<GameControllerScr
   public bool reset = false;
 
   void Start() {
+    Screen.SetResolution(1600, 960, true);
     this.playerScript = PlayerScript.Instance;
     this.player = PlayerScript.Instance.gameObject;
     this.mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
