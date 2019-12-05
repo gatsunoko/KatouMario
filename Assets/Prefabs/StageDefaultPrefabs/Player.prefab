@@ -57,7 +57,7 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.2756832, y: -0.46208984}
-      - {x: 0.29603618, y: -0.389746}
+      - {x: 0.30989838, y: -0.39120865}
       - {x: 0.09353781, y: -0.21746093}
       - {x: -0.09656024, y: -0.21066505}
       - {x: -0.24112368, y: -0.5022777}
@@ -125,11 +125,10 @@ PolygonCollider2D:
       - {x: -0.5362558, y: -0.14950562}
       - {x: -0.3660245, y: -0.63485324}
       - {x: -0.23322296, y: -0.9169158}
-      - {x: 0.20943458, y: -0.8863429}
-      - {x: 0.27751276, y: -0.867298}
-      - {x: 0.37178114, y: -0.7423096}
+      - {x: 0.39040375, y: -0.92632675}
       - {x: 0.46510863, y: -0.5210571}
-      - {x: 0.5288083, y: -0.1222229}
+      - {x: 0.5332506, y: 0.004383087}
+      - {x: 0.51824707, y: 0.12786865}
       - {x: 0.43875986, y: 0.20672989}
 --- !u!1 &2059521611974695626
 GameObject:
@@ -141,7 +140,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6820774314943093080}
   - component: {fileID: 5510751574746970003}
-  - component: {fileID: 1330086261}
   m_Layer: 12
   m_Name: PlayerArea
   m_TagString: PlayerSensor
@@ -188,32 +186,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.67200696, y: 1.6036739}
-  m_EdgeRadius: 0
---- !u!61 &1330086261
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059521611974695626}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.03200221, y: 1.1063643}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2194438, y: 1.0091457}
   m_EdgeRadius: 0
 --- !u!1 &2465793596977468774
 GameObject:
@@ -279,8 +251,12 @@ PolygonCollider2D:
       - {x: -0.22342187, y: 0.044384003}
       - {x: -0.21871981, y: 0.0422554}
       - {x: 0.056918412, y: 0.023715973}
-      - {x: 0.12654874, y: 0.47436905}
+      - {x: 0.33158112, y: 0.050971985}
+      - {x: 0.41611746, y: 0.6568184}
+      - {x: 0.4567309, y: 0.71398926}
+      - {x: 0.48053253, y: 0.8483963}
       - {x: 0.4984088, y: 0.97886276}
+      - {x: 0.48317656, y: 1.0761986}
       - {x: 0.3949671, y: 1.2492027}
 --- !u!1 &3012327066072596239
 GameObject:

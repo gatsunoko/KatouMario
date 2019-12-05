@@ -57,6 +57,7 @@ SpriteRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -104,6 +105,7 @@ GameObject:
   - component: {fileID: 4109871940725852772}
   - component: {fileID: 4109871940725852774}
   - component: {fileID: 4109871940725852773}
+  - component: {fileID: -7259930488981128450}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -193,3 +195,15 @@ MonoBehaviour:
   xUpper: 89.9
   yLower: -30.664
   yUpper: -30.664
+--- !u!114 &-7259930488981128450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109871940725852775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2883b953d38100543aed3458747b32b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

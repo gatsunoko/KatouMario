@@ -117,7 +117,6 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     //接地判定をして結果をgourended_result変数に入れる
     if ((grounded[0]) || (grounded[1]) || (grounded[2])) {
       grounded_result = true;
-      //this.playerStatus.ladder = false;
     }
     else {
       grounded_result = false;
@@ -160,7 +159,7 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     }
   }
 
-  private void OnCollisionEnter2D(Collision2D col) {
+  private void OnTriggerEnter2D(Collider2D col) {
     //動く床に乗った時動く要素を親オブジェクトにする
     if (col.gameObject.tag == "MoveFloor") {
       transform.SetParent(col.transform);
@@ -175,4 +174,20 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
       transform.rotation = Quaternion.Euler(0, 0, 0);
     }
   }
+
+  //private void OnCollisionEnter2D(Collision2D col) {
+  //  //動く床に乗った時動く要素を親オブジェクトにする
+  //  if (col.gameObject.tag == "MoveFloor") {
+  //    transform.SetParent(col.transform);
+  //  }
+  //}
+
+  //private void OnCollisionExit2D(Collision2D col) {
+  //  //動く床から離れたら床との親子関係を解消する
+  //  if (col.gameObject.tag == "MoveFloor") {
+  //    transform.SetParent(null);
+  //    //親オブジェクトが回転していた場合自分の角度も狂っているので、０にする
+  //    transform.rotation = Quaternion.Euler(0, 0, 0);
+  //  }
+  //}
 }
