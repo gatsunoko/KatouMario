@@ -109,10 +109,10 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     Vector2 linePos = transform.position;
     linePos.y -= 0.06f;
     grounded[0] = Physics2D.Linecast(transform.position, linePos, groundLayer);
-    linePos.x -= 0.15f;
+    linePos.x -= 0.305f;
     grounded[1] = Physics2D.Linecast(transform.position, linePos, groundLayer);
-    linePos.x += 0.15f;
-    linePos.x += 0.15f;
+    linePos.x += 0.305f;
+    linePos.x += 0.185f;
     grounded[2] = Physics2D.Linecast(transform.position, linePos, groundLayer);
     //接地判定をして結果をgourended_result変数に入れる
     if ((grounded[0]) || (grounded[1]) || (grounded[2])) {
