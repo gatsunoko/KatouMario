@@ -19,20 +19,25 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
   int jumpCount = 0;//ジャンプボタンを押している時間に応じてジャンプの高さを変える為、ジャンプ中ADDForceされた回数を保持する
   bool[] grounded = new bool[3] { false, false, false };
   public bool grounded_result = false;
+  bool oldGroundedResult = false; //前フレームのgrounded_resultを保管しておく為の変数
   public LayerMask groundLayer;
   public bool dead = false;
   StageDirectorScript stageDirectorScript;
   bool deadOne = true; //死んだら一回だけ実行するやつの判定
   AudioSource deadSound;
+  AudioSource jumpSound;
   public AudioClip[] deadSounds;
   int clipLength = 0;
+  bool jumpSoundPlay = true;//ジャンプの効果音を連続で鳴らさない為の判定用変数
 
   void Start() {
     this.rigid2d = GetComponent<Rigidbody2D>();
     this.animator = GetComponent<Animator>();
     this.dead = false;
     this.stageDirectorScript = GameObject.Find("StageDirector").GetComponent<StageDirectorScript>();
-    this.deadSound = GetComponent<AudioSource>();
+    AudioSource[] audioSources = GetComponents<AudioSource>();
+    this.deadSound = audioSources[0];
+    this.jumpSound = audioSources[1];
     this.clipLength = deadSounds.Length;
     this.deadOne = true;
   }
@@ -57,6 +62,10 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
         if (this.jumpButton && this.grounded_result) {
           this.rigid2d.velocity = new Vector2(this.rigid2d.velocity.x, this.jumpForce);
           this.jumpCount++;
+          if (this.jumpSoundPlay) {
+            this.jumpSoundPlay = false;
+            this.jumpSound.PlayOneShot(this.jumpSound.clip);
+          }
         }
       }
       else {
@@ -125,6 +134,10 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     if (!grounded_result) {
       this.jumpButton = false;
     }
+    //地面に接地したらジャンプの効果音鳴らす変数onにする
+    if (!this.jumpSoundPlay && this.grounded_result && !this.oldGroundedResult) {
+      this.jumpSoundPlay = true;
+    }
     //入力状況に応じてkey決定
     if (this.leftButton) {
       this.key = -1;
@@ -157,6 +170,8 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
     else {
       this.animator.SetFloat("Speed", 0);
     }
+    //次フレームで今フレームのgrounded_resultを確認する為に保管しておく
+    this.oldGroundedResult = this.grounded_result;
   }
 
   private void OnTriggerEnter2D(Collider2D col) {
