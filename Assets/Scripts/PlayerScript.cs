@@ -76,26 +76,26 @@ public class PlayerScript : SingletonMonoBehaviourFast<PlayerScript> {
 
   void Update() {
     //------------------PCデバッグ用---------------------------------
-    if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-      this.leftButton = true;
-    }
-    if (Input.GetKeyUp(KeyCode.LeftArrow)) {
-      this.leftButton = false;
-    }
+    //if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+    //  this.leftButton = true;
+    //}
+    //if (Input.GetKeyUp(KeyCode.LeftArrow)) {
+    //  this.leftButton = false;
+    //}
 
-    if (Input.GetKeyDown(KeyCode.RightArrow)) {
-      this.rightButton = true;
-    }
-    if (Input.GetKeyUp(KeyCode.RightArrow)) {
-      this.rightButton = false;
-    }
+    //if (Input.GetKeyDown(KeyCode.RightArrow)) {
+    //  this.rightButton = true;
+    //}
+    //if (Input.GetKeyUp(KeyCode.RightArrow)) {
+    //  this.rightButton = false;
+    //}
 
-    if (Input.GetKeyDown(KeyCode.Space)) {
-      this.jumpButton = true;
-    }
-    if (Input.GetKeyUp(KeyCode.Space)) {
-      this.jumpButton = false;
-    }
+    //if (Input.GetKeyDown(KeyCode.Space)) {
+    //  this.jumpButton = true;
+    //}
+    //if (Input.GetKeyUp(KeyCode.Space)) {
+    //  this.jumpButton = false;
+    //}
     //------------------PCデバッグ用ここまで-------------------------
     //死んでたら速度ゼロ
     if (this.dead) {

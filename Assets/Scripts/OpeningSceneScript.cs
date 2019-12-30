@@ -11,7 +11,7 @@ public class OpeningSceneScript : MonoBehaviour {
   bool alreadySE = false;
 
   private void Start() {
-    text.transform.position = new Vector2(0.56f, 0.07f);
+    text.transform.position = new Vector2(0.9f, 0.07f);
     openingSE = GetComponent<AudioSource>();
     openingSE.PlayOneShot(openingSE.clip);
     PlayerPrefs.SetFloat("cameraY", 0.25f);

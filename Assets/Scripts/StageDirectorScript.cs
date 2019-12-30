@@ -7,12 +7,18 @@ public class StageDirectorScript : MonoBehaviour {
 
   public bool clear = false;
   float clearAfterTime = 0;
+  public bool goEnding = false;
 
   void Update() {
     if (this.clear) {
       this.clearAfterTime += Time.deltaTime;
       if (this.clearAfterTime >= 3.0f) {
-        SceneManager.LoadScene("StageSelect");
+        if (goEnding) {
+          SceneManager.LoadScene("EndingScene");
+        }
+        else {
+          SceneManager.LoadScene("StageSelect");
+        }
       }
     }
     //R押したらリセット
